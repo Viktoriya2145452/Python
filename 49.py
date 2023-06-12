@@ -38,3 +38,32 @@ def ritm(string):
 
 
 print(ritm("пара-ра-рам рам-пам-папам па-ра-па-дам"))
+
+'''
+text = input().lower().split()
+result = set()
+vowels = 'ёуеыаоэяию'
+for word in text:
+    count = 0
+    for char in word:
+        if char in vowels:
+            count += 1
+    result.add(count)
+if len(result) == 1:
+    print("Парам пам-пам")
+else:
+    print("Пам парам")
+    '''
+'''
+text = input().lower().split()
+result = set()
+vowels = 'ёуеыаоэяию'
+for word in text:
+    count = [int(char in vowels) for char in word]
+    result.add(sum(count))
+if len(result) == 1:
+    print("Парам пам-пам")
+else:
+    print("Пам парам")
+
+'''
